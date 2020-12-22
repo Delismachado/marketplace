@@ -1,11 +1,9 @@
-import categories
-
 class Marketplace:
 
         def __init__(self, id: int, name: str):
                 self.__id = id
                 self.__name = name
-                self.__categories = categories        
+                self.__categories = []       
 
 
 

@@ -1,11 +1,9 @@
-import subCategories
-
-class Category:
+class Category(Marketplace):
 
         def __init__(self, id: int, name: str):
                 self.__id = id
                 self.__name = name
-                self.__subCategories = subCategories
+                self.__subCategories = []
 
 
         def set_id(self, id: int) -> None:
@@ -21,7 +19,7 @@ class Category:
         def get_name(self) -> str:
                 return self.__name
         
-        def set_subCategory(self, name: str) -> None:
+        def set_subCategory(self, subCategories: str) -> None:
                 self.__subCategories = subCategories 
 
         def get_subCategory(self) -> str:

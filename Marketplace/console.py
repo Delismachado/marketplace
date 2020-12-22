@@ -15,4 +15,4 @@ def list_categories():
     print('\nCategories: ')    
     for c in categories:
         print(c)
-list_marketplaces()
+list_categories()
