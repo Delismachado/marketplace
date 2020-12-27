@@ -1,8 +1,8 @@
 from catalogo import Marketplace, Category, Subcategory
 
 marketplaces = [Marketplace('Enjoei'), Marketplace('BigCommerce'), Marketplace('Etsy'), Marketplace('Evolutto'), Marketplace('Sair')]
-categories = [Category('Home', marketplaces[1]), Category('Dinner', marketplaces[0]), Category('Food', marketplaces[1])]
-subcategories = [Subcategory('Lunch', categories[0]), Subcategory('Style', categories[0]), Subcategory('Go', categories[1])]
+categories = [Category('Home', marketplaces[0]), Category('Dinner', marketplaces[1]), Category('Food', marketplaces[2])]
+subcategories = [Subcategory('Lunch', categories[0]), Subcategory('Style', categories[1]), Subcategory('Go', categories[2])]
 
 def menu(): 
 
