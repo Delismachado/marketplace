@@ -1,19 +1,19 @@
-from marketplaces import Marketplace, Category, Subcategory
+from catalogo import Marketplace, Category, Subcategory
 
-mktplaces = [Marketplace('Amazon'), Marketplace('B2W'), Marketplace('Zoom'), Marketplace('Carrefour'), Marketplace('Sair')]
-categorias = [Category('Móveis', mktplaces[1]), Category('Telefonia', mktplaces[0]), Category('Eletrodomésticos', mktplaces[1])]
-subcategorias = [Subcategory('Sofá', categorias[0]), Subcategory('Mesa', categorias[0]), Subcategory('Mesa', categorias[1])]
+marketplaces = [Marketplace('Enjoei'), Marketplace('BigCommerce'), Marketplace('Etsy'), Marketplace('Evolutto'), Marketplace('Sair')]
+categories = [Category('Home', marketplaces[1]), Category('Dinner', marketplaces[0]), Category('Food', marketplaces[1])]
+subcategories = [Subcategory('Lunch', categories[0]), Subcategory('Style', categories[0]), Subcategory('Go', categories[1])]
 
 def menu(): 
 
     print('\nMENU: ')
 
     i = 1
-    for option in mktplaces:
+    for option in marketplaces:
         print(f'{i} - {option}')
         i += 1
 
-    op = int(input('Selecione uma opção: '))
+    op = int(input('Choose an option: '))
     return op
 
 while True:
@@ -21,18 +21,18 @@ while True:
         op = menu()
         if op == 1:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[0]}\n')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[0].get_name():
+            print(f'\nYour choice! {marketplaces[0]}\n')
+            for i in categories:
+                if i.get_parentname() ==  marketplaces[0].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            choose_cat = int(input(f'\nChoose a category: '))
             while True:
                 try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[1].get_name():
-                                print(f'\n Menu de categorias:')
+                    if choose_cat == 1:
+                        for i in subcategories:
+                            if i.get_parentname() == categories[1].get_name():
+                                print(f'\nCategory options:')
                                 print(f'\n{i.get_subcat()}')
                         break
                 except Exception as e: 
@@ -41,17 +41,17 @@ while True:
                 
         elif op == 2:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[1]}\n')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[1].get_name():
+            print(f'\nYour choice! {marketplaces[1]}\n')
+            for i in categories:
+                if i.get_parentname() ==  marketplaces[1].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            choose_cat = int(input(f'\nChoose a category: '))
             while True:
                 try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[0].get_name():
+                    if choose_cat == 1:
+                        for i in subcategories:
+                            if i.get_parentname() == categories[0].get_name():
                                 print(f'\n{i.get_subcat()}')
 
                         break
@@ -61,17 +61,17 @@ while True:
                 
         elif op == 3:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[2]}\n')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[2].get_name():
+            print(f'\nYour choice! {marketplaces[2]}\n')
+            for i in categories:
+                if i.get_parentname() ==  marketplaces[2].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            choose_cat = int(input(f'\nChoose a category: '))
             while True:
                 try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[0].get_name():
+                    if choose_cat == 1:
+                        for i in subcategories:
+                            if i.get_parentname() == categories[0].get_name():
                                 print(f'\n{i.get_subcat()}')
                         break
                 except Exception as e: 
@@ -80,17 +80,17 @@ while True:
 
         elif op == 4:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[3]}\n')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[3].get_name():
+            print(f'\nYour choice {marketplaces[3]}\n')
+            for i in categories:
+                if i.get_parentname() ==  marketplaces[3].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            choose_cat = int(input(f'\nChoose a category: '))
             while True:
                 try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[0].get_name():
+                    if choose_cat == 1:
+                        for i in subcategories:
+                            if i.get_parentname() == categories[0].get_name():
                                 print(f'\n{i.get_subcat()}')
                         break
                 except Exception as e: 
@@ -98,10 +98,10 @@ while True:
                     break
             
         elif op == 5:
-            exit(0) #tentar alterar
+            exit(0)
         else:
-            print('Digite uma opção válida!')
+            print('Enter a valid option.!')
         break
 
     except ValueError:
-        print('Opção indisponível. Tente novamente.')
+        print('Option unavailable. Try again.')
