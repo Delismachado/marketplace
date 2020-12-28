@@ -1,10 +1,9 @@
 {% extends 'template.html' %} {% block body %}
 <ol>
-    {% for i in cat %} {% if i.get_parentname() == mkt %}
+    {% for i in cat %} {% if i.get_parentname() == mktplaces %}
     <li>
-        <a href='/category'></a>{{i.get_name()}}
+        <a href='/subcategory/{{i.get_name()}}'>{{i.get_name()}}</a>
     </li>
-
     {% endif %} {% endfor %}
 </ol>
-<a href="/">Go back</a> {% endblock %}
+{% endblock %}

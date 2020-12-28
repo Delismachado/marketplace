@@ -2,7 +2,8 @@
 <ol>
     {% for i in subcat %} {% if i.get_parentname() == cat %}
     <li>
-        <a href='/subcategory/'></a>{{i.get_name()}}</li>
+        <a href=''>{{i.get_subcat()}}</a>
+    </li>
     {% endif %} {% endfor %}
 </ol>
-<a href="/">Go back</a> {% endblock %}
+{% endblock %}

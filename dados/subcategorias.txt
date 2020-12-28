@@ -1,0 +1,6 @@
+Casa;Sofá
+Mesa;Banho
+Eletros;Faca
+Eletros;Fogo
+Alguma;Coisa
+Self;Fone

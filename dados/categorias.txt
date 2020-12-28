@@ -1,0 +1,6 @@
+Aws;Motossera
+Enjoy;Casa
+Other;Machado
+Elfo;Book
+B2W;Cartoes
+B2W;Livros
