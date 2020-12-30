@@ -1,3 +1,4 @@
+import datetime
 class Marketplace:
     def __init__(self, Marketplace: str):
         self.__namemkp = Marketplace
@@ -69,3 +70,12 @@ class Dados:
             subcat.append(i)
         arq.close()
         return subcat
+
+    def log(acao):
+        arquivo = open('dados/log.txt', 'a')
+        l = datetime.datetime.now()
+        l = l.strftime("%d /%m /%y acesso às %H:%M horas.")
+        arquivo.write(f'{l} {acao}\n')
+        arquivo.close()
+
+

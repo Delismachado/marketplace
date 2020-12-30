@@ -39,6 +39,7 @@ while True:
         if op == 1:
             item = 1
             print(f'\nVocê escolheu a opção {mktplaces[0]}\n')
+            Dados.log(f'Acesso à categoria do marktplace {mktplaces[0], mktplaces[1]}')
             for i in categorias:
                 if i.get_parentname() ==  mktplaces[0].get_name():
                     print(f'{item} - {i.get_name()}')
