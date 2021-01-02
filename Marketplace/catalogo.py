@@ -39,7 +39,7 @@ class Dados:
         mktplaces = []
         arq = open('dados/mkplaces.txt', 'r')
         for i in arq:
-            i = i.strip() #tira o \n
+            i = i.strip()
             i = {'mktplace':i} 
             mktplaces.append(i)
         arq.close()
@@ -49,7 +49,7 @@ class Dados:
         cat = []
         arq = open('dados/categorias.txt', 'r')
         for i in arq:
-            i = i.strip() #tira o \n
+            i = i.strip()
             j = i.split(';')
             i = {'categoria':j[1], 
                 'mkplace':j[0]
@@ -62,7 +62,7 @@ class Dados:
         subcat = []
         arq = open('dados/subcategorias.txt', 'r')
         for i in arq:
-            i = i.strip() #tira o \n
+            i = i.strip()
             j = i.split(';')
             i = {'subcategoria':j[1], 
                 'categoria':j[0]
@@ -74,7 +74,7 @@ class Dados:
     def log(acao):
         arquivo = open('dados/log.txt', 'a')
         l = datetime.datetime.now()
-        l = l.strftime("%d /%m /%y acesso às %H:%M horas.")
+        l = l.strftime("%d /%m /%y access the %H:%M h/m.")
         arquivo.write(f'{l} {acao}\n')
         arquivo.close()
 

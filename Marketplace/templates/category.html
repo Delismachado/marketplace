@@ -2,7 +2,7 @@
 <ol>
     {% for i in cat %} {% if i.get_parentname() == mktplaces %}
     <li>
-        <a href='/subcategory/{{i.get_name()}}'>{{i.get_name()}}</a>
+        <a href='' {{i.get_name()}} '>{{i.get_name()}}</a>
     </li>
     {% endif %} {% endfor %}
 </ol>

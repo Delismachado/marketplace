@@ -30,7 +30,7 @@ def menu():
         print(f'{i} - {option}')
         i += 1
 
-    op = int(input('Selecione uma opção: '))
+    op = int(input('Choose an option: '))
     return op
 
 while True:
@@ -38,19 +38,19 @@ while True:
         op = menu()
         if op == 1:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[0]}\n')
-            Dados.log(f'Acesso à categoria do marktplace {mktplaces[0], mktplaces[1]}')
+            print(f'\nYour choice: {mktplaces[0]}\n')
+            Dados.log(f'Access to the marketplace category {mktplaces[0]}')
             for i in categorias:
                 if i.get_parentname() ==  mktplaces[0].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            escolher_cat = int(input(f'\nChoose an option: '))
             while True:
                 try:
                     if escolher_cat == 1:
                         for i in subcategorias:
                             if i.get_parentname() == categorias[1].get_name():
-                                print(f'\n Menu de categorias:')
+                                print(f'\n Categories:')
                                 print(f'\n{i.get_subcat()}')
                         break
                 except Exception as e: 
@@ -59,20 +59,21 @@ while True:
                 
         elif op == 2:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[1]}\n')
+            print(f'\nYour option: {mktplaces[1]}\n')
+            Dados.log(f'Access to the marketplace category {mktplaces[1]}')
             for i in categorias:
                 if i.get_parentname() ==  mktplaces[1].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            escolher_cat = int(input(f'\nChoose an option: '))
             while True:
                 try:
                     if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[0].get_name():
+                        print('Categorias:')
+                        for i in subcategorias:                            
+                            if i.get_parentname() == categorias[1].get_name():
                                 print(f'\n{i.get_subcat()}')
-
-                        break
+                            break
                 except Exception as e: 
                     print(e)
                     break
@@ -80,16 +81,17 @@ while True:
         elif op == 3:
             item = 1
             print(f'\nVocê escolheu a opção {mktplaces[2]}\n')
+            Dados.log(f'Access to the marketplace category {mktplaces[2]}')
             for i in categorias:
                 if i.get_parentname() ==  mktplaces[2].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            escolher_cat = int(input(f'\nChoose an option for category: '))
             while True:
                 try:
                     if escolher_cat == 1:
                         for i in subcategorias:
-                            if i.get_parentname() == categorias[0].get_name():
+                            if i.get_parentname() == categorias[1].get_name():
                                 print(f'\n{i.get_subcat()}')
                         break
                 except Exception as e: 
@@ -98,19 +100,20 @@ while True:
 
         elif op == 4:
             item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[3]}\n')
+            print(f'\nYour option: {mktplaces[3]}\n')
+            Dados.log(f'Access to the marketplace category {mktplaces[3]}')
             for i in categorias:
                 if i.get_parentname() ==  mktplaces[3].get_name():
                     print(f'{item} - {i.get_name()}')
                     item += 1
-            escolher_cat = int(input(f'\nDigite uma opção de categoria: '))
+            escolher_cat = int(input(f'\nChoose an option: '))
             while True:
                 try:
                     if escolher_cat == 1:
                         for i in subcategorias:
                             if i.get_parentname() == categorias[0].get_name():
                                 print(f'\n{i.get_subcat()}')
-                        break
+                            break
                 except Exception as e: 
                     print(e)
                     break
@@ -118,8 +121,8 @@ while True:
         elif op == 5:
             exit(0) 
         else:
-            print('Digite uma opção válida!')
+            print('Please enter a valid option!')
         break
 
     except ValueError:
-        print('Opção indisponível. Tente novamente.')
+        print('Option unavailable. Try again.')

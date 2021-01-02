@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from catalogo import Marketplace, Category, Subcategory, Dados
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 mktplaces = []
 result_mktplaces = Dados.get_mktplaces()

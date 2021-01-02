@@ -1,5 +1,5 @@
-Casa;Sofá
-Mesa;Banho
+Casa;Sofá;a
+Mesa;Banho;s
 Eletros;Faca
 Eletros;Fogo
 Alguma;Coisa

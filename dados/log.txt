@@ -1,1 +1,7 @@
-28 /12 /20 horas 17 39  Listando categoria do marktplace Aws
+28 /12 /20 horas 17 39  Listando categoria do marktplace Aws30 /12 /20 acesso às 16:16 horas. Acesso à categoria do marktplace (<catalogo.Marketplace object at 0x7fb89e53f670>, <catalogo.Marketplace object at 0x7fb89e518d00>)
+30 /12 /20 acesso às 16:21 horas. Acesso à categoria do marktplace (<catalogo.Marketplace object at 0x7f2a9e418670>, <catalogo.Marketplace object at 0x7f2a9e3f1d00>)
+30 /12 /20 acesso às 16:23 horas. Acesso à categoria do marktplace (<catalogo.Marketplace object at 0x7fac9fb69670>, <catalogo.Marketplace object at 0x7fac9fb42d00>)
+30 /12 /20 acesso às 16:25 horas. Acesso à categoria do marktplace (<catalogo.Marketplace object at 0x7fc3aaecf670>, <catalogo.Marketplace object at 0x7fc3aaea8d00>)
+30 /12 /20 acesso às 16:33 horas. Acesso à categoria do marktplace Aws
+30 /12 /20 acesso às 16:39 horas. Acesso à categoria do marktplace Aws
+30 /12 /20 acesso às 16:42 horas. Acesso à categoria do marktplace Aws
