@@ -1,6 +1,3 @@
-Aws;Motossera;outr
-Enjoy;Casa;home
-Other;Machado;teste
-Elfo;Book;isso
-B2W;Cartoes;outra
-B2W;Livros;algo
+market1;cat11
+market1;cat12
+market2;cat21

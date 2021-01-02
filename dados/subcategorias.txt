@@ -1,6 +1,1 @@
-Casa;Sofá;a
-Mesa;Banho;s
-Eletros;Faca
-Eletros;Fogo
-Alguma;Coisa
-Self;Fone
+cat11;subcat111

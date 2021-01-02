@@ -36,93 +36,47 @@ def menu():
 while True:
     try:
         op = menu()
-        if op == 1:
-            item = 1
-            print(f'\nYour choice: {mktplaces[0]}\n')
-            Dados.log(f'Access to the marketplace category {mktplaces[0]}')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[0].get_name():
-                    print(f'{item} - {i.get_name()}')
-                    item += 1
-            escolher_cat = int(input(f'\nChoose an option: '))
-            while True:
-                try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[1].get_name():
-                                print(f'\n Categories:')
-                                print(f'\n{i.get_subcat()}')
-                        break
-                except Exception as e: 
-                    print(e)
-                    break
-                
-        elif op == 2:
-            item = 1
-            print(f'\nYour option: {mktplaces[1]}\n')
-            Dados.log(f'Access to the marketplace category {mktplaces[1]}')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[1].get_name():
-                    print(f'{item} - {i.get_name()}')
-                    item += 1
-            escolher_cat = int(input(f'\nChoose an option: '))
-            while True:
-                try:
-                    if escolher_cat == 1:
-                        print('Categorias:')
-                        for i in subcategorias:                            
-                            if i.get_parentname() == categorias[1].get_name():
-                                print(f'\n{i.get_subcat()}')
-                            break
-                except Exception as e: 
-                    print(e)
-                    break
-                
-        elif op == 3:
-            item = 1
-            print(f'\nVocê escolheu a opção {mktplaces[2]}\n')
-            Dados.log(f'Access to the marketplace category {mktplaces[2]}')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[2].get_name():
-                    print(f'{item} - {i.get_name()}')
-                    item += 1
-            escolher_cat = int(input(f'\nChoose an option for category: '))
-            while True:
-                try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[1].get_name():
-                                print(f'\n{i.get_subcat()}')
-                        break
-                except Exception as e: 
-                    print(e)
-                    break
+        if op == 0 :
+            break
+        marketplace_index = op - 1
+        print(f'\nYour choice: {mktplaces[marketplace_index]}\n')
+        Dados.log(f'Access to the marketplace category {mktplaces[marketplace_index]}')
 
-        elif op == 4:
-            item = 1
-            print(f'\nYour option: {mktplaces[3]}\n')
-            Dados.log(f'Access to the marketplace category {mktplaces[3]}')
-            for i in categorias:
-                if i.get_parentname() ==  mktplaces[3].get_name():
-                    print(f'{item} - {i.get_name()}')
-                    item += 1
-            escolher_cat = int(input(f'\nChoose an option: '))
-            while True:
-                try:
-                    if escolher_cat == 1:
-                        for i in subcategorias:
-                            if i.get_parentname() == categorias[0].get_name():
-                                print(f'\n{i.get_subcat()}')
-                            break
-                except Exception as e: 
-                    print(e)
-                    break
-            
-        elif op == 5:
-            exit(0) 
-        else:
-            print('Please enter a valid option!')
-        break
+        # function: get_categories(mktplaces[marketplace_index]) || OO: mktplaces[marketplace_index].get_categories()
+        market_categories = []
+        for i in categorias:
+            if i.get_parentname() ==  mktplaces[marketplace_index].get_name():
+                market_categories.append(i)
+        if len(market_categories) == 0 :
+            continue
+
+        for i, category in enumerate(market_categories):
+            print(f'{i + 1} - {category.get_name()}')
+        escolher_cat = int(input(f'\nChoose an option: '))
+        category_index = escolher_cat - 1
+
+        # function: get_subcategories(market_categories[category_index]) || OO: market_categories[category_index].get_subcategories()
+        category_subcategories = []
+        for i in subcategorias:
+            if i.get_parentname() ==  market_categories[category_index].get_name():
+                category_subcategories.append(i)
+
+        print(f'\n Sub categories:')
+        for i, subcategories in enumerate(category_subcategories):
+            print(f'{i + 1} - {subcategories.get_subcat()}')
 
     except ValueError:
         print('Option unavailable. Try again.')
+
+"""
+while true:
+  market = choose_market(markets)
+  category = choose_category(market.get_categories())
+  list_subcategories(category.get_subcategories())
+"""
+"""
+while true:
+  market = choose_market(markets)
+  category = choose_category(get_categories(market))
+  list_subcategories(get_subcategories(category))
+"""
