@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    <title>Marketplaces olist</title>
 </head>
 
 <body>
-    <p>Marketplace</p>
-    {% block body %}
-    <ul>
-        <li>
-            <a href="/"> </a>
-        </li>
-    </ul>
 
-    {% endblock %}
+    <div><a href="/"> Marketplaces cadastrados</a></div>
+    <div>
+        <a href="/cadastrar_marketplace">Cadastrar Marketplaces</a>
+        <a href="/cadastrar_categoria">Cadastrar Categoria</a>
+        <a href="/cadastrar_subcategoria">Cadastrar Subcategoria</a>
+    </div>
+    {{msg}} {% block body %} {% endblock %}
 </body>
 
 </html>

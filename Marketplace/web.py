@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from catalogo import Marketplace, Category, Subcategory, Dados
 
 app = Flask(__name__)
@@ -28,6 +28,8 @@ for i in result_subcat:
 def index():
     return render_template('index.html', mktplaces = mktplaces)
 
+    
+
 @app.route('/category/<mktplaces>')
 def category(mktplaces):
     print(mktplaces)
@@ -36,5 +38,24 @@ def category(mktplaces):
 @app.route('/subcategory/<cat>')
 def subcategory(cat):
     return render_template('subcategories.html', subcat = subcategorias, cat = cat)
+
+@app.route('/cadastrar_marketplace')
+def cadastro_Marketplace():
+    msg = ''
+    add_mkplace = request.args.get('market')
+    if add_mkplace is not None:
+        print(add_mkplace)
+        Dados.set_marketplaces(add_mkplace)
+        msg = f'{add_mkplace} cadastrado com sucesso'
+        Dados.log(f'resgistro de marketplaces')
+    return render_template('cadastro_marketplace.html',menssagem=msg)
+
+@app.route('/cadastrar_categoria')
+def cadastro_categoria():    
+    pass
+
+@app.route('/cadastrar_subcategoria')
+def cadastro_subcategoria():
+    pass
 
 app.run(debug=True)
