@@ -33,6 +33,7 @@ def index():
 @app.route('/category/<mktplaces>')
 def category(mktplaces):
     print(mktplaces)
+    Dados.log(f'listando marketplaces')
     return render_template('category.html', cat = categorias, mktplaces = mktplaces)
 
 @app.route('/subcategory/<cat>')
@@ -45,7 +46,7 @@ def cadastro_Marketplace():
     add_mkplace = request.args.get('market')
     if add_mkplace is not None:
         print(add_mkplace)
-        Dados.set_marketplaces(add_mkplace)
+        add = Dados.set_maktplaces(add_mkplace)
         msg = f'{add_mkplace} cadastrado com sucesso'
         Dados.log(f'resgistro de marketplaces')
     return render_template('cadastro_marketplace.html',menssagem=msg)

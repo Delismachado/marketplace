@@ -26,3 +26,4 @@
 02 /01 /21 access the 20:12 h/m. Access to the marketplace category market2
 02 /01 /21 access the 20:12 h/m. Access to the marketplace category market3
 02 /01 /21 access the 20:12 h/m. Access to the marketplace category market3
+04 /01 /21 access the 09:38 h/m. resgistro de marketplaces

@@ -36,9 +36,12 @@ class Subcategory:
 
 class Dados:
 
-    def set_maktplaces(self, mkplaces):
-        arq = open('dados/mkplaces.txt', 'a')        
-        arq.write(f'\n{mkplaces}')       
+    def set_maktplaces(mkplaces):
+        arq = open('dados/mkplaces.txt', 'r')
+        for linha in arq:
+            linha = linha.strip()            
+        arq = open('dados/mkplaces.txt', 'a')
+        arq.write(f'\n{mkplaces}')        
 
 
     def get_mktplaces() -> list:
@@ -51,8 +54,8 @@ class Dados:
         arq.close()
         return mktplaces
 
-    def set_cat(mkplaces, categoria):
-        arq = open('dados/categorias.txt', 'a')
+    def set_cat(self, mkplaces, categoria):
+        arq = open('dados/categorias.txt', 'r')
         arq.write(f'\n{mkplaces};{categoria}')
 
     def get_cat():
