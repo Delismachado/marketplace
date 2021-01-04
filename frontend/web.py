@@ -1,3 +1,7 @@
+import sys
+sys.path.append('backend')
+#print(sys.path)
+
 from flask import Flask, render_template, request
 from catalogo import Marketplace, Category, Subcategory, Dados
 

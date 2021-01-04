@@ -37,16 +37,16 @@ class Subcategory:
 class Dados:
 
     def set_maktplaces(mkplaces):
-        arq = open('dados/mkplaces.txt', 'r')
+        arq = open('logs/mkplaces.txt', 'r')
         for linha in arq:
             linha = linha.strip()            
-        arq = open('dados/mkplaces.txt', 'a')
+        arq = open('logs/mkplaces.txt', 'a')
         arq.write(f'\n{mkplaces}')        
 
 
     def get_mktplaces() -> list:
         mktplaces = []
-        arq = open('dados/mkplaces.txt', 'r')
+        arq = open('logs/mkplaces.txt', 'r')
         for i in arq:
             i = i.strip()
             i = {'mktplace':i} 
@@ -55,12 +55,12 @@ class Dados:
         return mktplaces
 
     def set_cat(self, mkplaces, categoria):
-        arq = open('dados/categorias.txt', 'r')
+        arq = open('logs/categorias.txt', 'r')
         arq.write(f'\n{mkplaces};{categoria}')
 
     def get_cat():
         cat = []
-        arq = open('dados/categorias.txt', 'r')
+        arq = open('logs/categorias.txt', 'r')
         for i in arq:
             i = i.strip()
             j = i.split(';')
@@ -73,13 +73,13 @@ class Dados:
 
 
     def set_subcat(categorias, subcategorias):
-        arq = open('dados/subcategorias.txt', 'a')
+        arq = open('logs/subcategorias.txt', 'a')
         arq.write(f'\n{categorias};{subcategorias}')
 
         
     def get_subcat():
         subcat = []
-        arq = open('dados/subcategorias.txt', 'r')
+        arq = open('logs/subcategorias.txt', 'r')
         for i in arq:
             i = i.strip()
             j = i.split(';')
@@ -91,7 +91,7 @@ class Dados:
         return subcat
 
     def log(acao):
-        arquivo = open('dados/log.txt', 'a')
+        arquivo = open('logs/log.txt', 'a')
         l = datetime.datetime.now()
         l = l.strftime("%d /%m /%y access the %H:%M h/m.")
         arquivo.write(f'{l} {acao}\n')
